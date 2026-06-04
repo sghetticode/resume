@@ -55,7 +55,7 @@ nav {
     border-left: solid 1px rgba(69 76 87 / 0.9);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    padding: 4px 18px 10px 18px;
+    padding: 4px 0 10px 18px;
 }
 
 nav a {
@@ -66,7 +66,19 @@ nav a {
     font-size: 1.125rem;
     color: rgb(248 248 248);
     line-height: 2;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+#misc-links {
+    width: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: solid 1.5px rgba(69 76 87 / 0.9);
 }
 
 main {
