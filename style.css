@@ -1,5 +1,5 @@
 /* bg-pattern.svg is licensed under CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/.
- * You're free to use it in personal projects if you credit my full name - Jake H. Black.
+ * You're free to use it in personal (non-commercial) projects if you credit me, Jake H. Black.  
  * Commercial use is prohibited. */
 
 html {
@@ -74,16 +74,9 @@ nav a:hover {
     text-underline-offset: 3px;
 }
 
-#misc-links {
-    width: auto;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: solid 1.5px rgba(69 76 87 / 0.9);
-}
-
 main {
     width: 40vw;
-    margin: 24px 0 32px 24px;
+    margin: 0 0 24px 24px;
     flex: 0 0 auto;
     min-width: 0;
 }
@@ -91,6 +84,7 @@ main {
 .card {
     width: auto;
     height: fit-content;
+    margin-top: 24px;
     border-top: solid 0.5px rgba(77 85 97 / 0.9);
     border-right: solid 0.5px rgba(77 85 97 / 0.9);
     border-bottom: solid 0.5px rgba(77 85 97 / 0.9);
@@ -112,13 +106,19 @@ h3 {
     font-style: 400;
 }
 
-.card-content {
+.card-body {
     padding: 14px 28px 4px 20px;
+}
+
+.card-body a {
+    display: block;
+    color: rgb(248 248 248);
+    line-height: 2;
+    text-decoration: none;
 }
 
 #about-me {
     text-align: justify;
-    margin-bottom: 24px;
 }
 
 #about-me p {
@@ -128,7 +128,6 @@ h3 {
 #education,
 #skill-set {
     padding-bottom: 0;
-    margin-bottom: 24px;
 }
 
 #education p,
@@ -161,4 +160,9 @@ h3 {
 
 ul {
     padding-left: 20px;
+}
+
+#misc-links {
+    width: fit-content;
+    padding: 0 2px 8px 2px;
 }
