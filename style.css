@@ -2,182 +2,185 @@
  * You're free to use it in personal (non-commercial) projects if you credit me, Jake H. Black.  
  * Commercial use is prohibited. */
 
+:root {
+  --bg-color: rgb(18 51 64);
+  --card-border: rgba(77 85 97 / 0.9);
+  --nav-border: rgba(69 76 87 / 0.9);
+  --text: rgb(248 248 248);
+}
+
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    font-family: "DM Mono", ui-monospace, ui-sans-serif;
-    font-size: 1rem;
-    color: rgb(248 248 248);
-    line-height: 1.5;
-    background: rgb(18 51 64);
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  font-family: "DM Mono", ui-monospace, ui-sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.5;
+  background: var(--bg-color);
 }
 
 body::before {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background-image: url(./bg-pattern.svg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    content: "";
-    opacity: 0.5;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url(./bg-pattern.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  content: "";
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 #sidebar {
-    box-sizing: border-box;
-    align-self: stretch;
-    padding: 24px;
-    filter: drop-shadow(1.25px 0 1px rgb(5 14 18));
-    background: linear-gradient(90deg, rgba(10 27 33 / 0.75) 0%, rgba(17 45 56 / 0.75) 100%);
+  box-sizing: border-box;
+  align-self: stretch;
+  padding: 24px;
+  filter: drop-shadow(1.25px 0 1px rgb(5 14 18));
+  background: linear-gradient(90deg, rgba(10 27 33 / 0.75) 0%, rgba(17 45 56 / 0.75) 100%);
 }
 
 #sidebar h1 {
-    margin: 0;
-    line-height: 1;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
 }
 
 #sticky {
-    position: sticky;
-    top: 24px;
+  position: sticky;
+  top: 24px;
 }
 
 nav {
-    margin-top: 20px;
-    border-top: solid 1px rgba(69 76 87 / 0.9);
-    border-bottom: solid 1px rgba(69 76 87 / 0.9);
-    border-left: solid 1px rgba(69 76 87 / 0.9);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding: 4px 0 10px 18px;
+  margin-top: 20px;
+  border-top: solid 1px var(--nav-border);
+  border-bottom: solid 1px var(--nav-border);
+  border-left: solid 1px var(--nav-border);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 4px 0 10px 18px;
 }
 
 nav a {
-    width: fit-content;
-    margin: 0;
-    border-radius: 8px;
-    display: block;
-    font-size: 1.125rem;
-    color: rgb(248 248 248);
-    line-height: 2;
-    text-decoration: none;
+  width: fit-content;
+  margin: 0;
+  border-radius: 8px;
+  display: block;
+  font-size: 1.125rem;
+  color: var(--text);
+  line-height: 2;
+  text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 #load-md {
-    margin-top: 24px;
-    padding-left: 12px;
-    border-left: solid 1.5px rgba(77 85 97 / 0.9);
+  margin-top: 24px;
+  padding-left: 12px;
+  border-left: solid 1.5px var(--card-border);
 }
 
 #load-md a {
-    color: rgb(248 248 248);
-    line-height: 2;
-    text-decoration: none;
+  color: var(--text);
+  line-height: 2;
+  text-decoration: none;
 }
 
 main {
-    width: 40vw;
-    margin: 0 0 24px 24px;
-    flex: 0 0 auto;
-    min-width: 0;
+  width: 40vw;
+  margin: 0 0 24px 24px;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .card {
-    width: auto;
-    height: fit-content;
-    margin-top: 24px;
-    border-top: solid 0.5px rgba(77 85 97 / 0.9);
-    border-right: solid 0.5px rgba(77 85 97 / 0.9);
-    border-bottom: solid 0.5px rgba(77 85 97 / 0.9);
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    box-shadow: rgba(5 14 18 / 0.8) 1px 2px 3px;
-    background: linear-gradient(22.5deg, rgb(5 14 18) 0%, rgb(29 31 36) 100%);
+  width: auto;
+  height: fit-content;
+  margin-top: 24px;
+  border-top: solid 0.5px var(--card-border);
+  border-right: solid 0.5px var(--card-border);
+  border-bottom: solid 0.5px var(--card-border);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: rgba(5 14 18 / 0.8) 1px 2px 3px;
+  background: linear-gradient(22.5deg, rgb(5 14 18) 0%, rgb(29 31 36) 100%);
 }
 
 .card-heading {
-    padding: 12px 0 0 20px;
-    border-bottom: solid 1px rgba(77 85 97 / 0.8);
+  padding: 12px 0 0 20px;
+  border-bottom: solid 1px rgba(77 85 97 / 0.8);
 }
 
-h1,
 h2,
 h3 {
-    margin: 0 0 4px 0;
-    font-style: 400;
+  margin: 0 0 4px 0;
+  font-weight: 400;
 }
 
 .card-body {
-    padding: 14px 28px 4px 20px;
+  padding: 14px 28px 4px 20px;
 }
 
 .card-body a {
-    display: block;
-    color: rgb(248 248 248);
-    line-height: 2;
-    text-decoration: none;
+  display: block;
+  color: var(--text);
+  line-height: 2;
+  text-decoration: none;
 }
 
 #about-me {
-    text-align: justify;
+  text-align: justify;
 }
 
 #about-me p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #education,
 #skill-set {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 #education p,
 #skill-set p {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 #skills-wrapper {
-    width: 35vw;
+  width: 35vw;
 }
 
 #skill-set h3 {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-#technical-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
+#technical-skills, 
 #creative-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #experience {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 ul {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 #misc-links {
-    width: fit-content;
-    padding: 0 2px 8px 2px;
+  width: fit-content;
+  padding: 0 2px 8px 2px;
 }
