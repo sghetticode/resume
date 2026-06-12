@@ -1,12 +1,12 @@
 /* bg-pattern.svg is licensed under CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/.
- * You're free to use it in personal (non-commercial) projects if you credit me, Jake H. Black.  
- * Commercial use is prohibited. */
+ * You're welcome to use it on personal (non-commercial) projects if you credit me, Jake H. Black. */
 
 :root {
+  --txt-color: rgb(248 248 248);
   --bg-color: rgb(18 51 64);
-  --card-border: rgba(77 85 97 / 0.9);
   --nav-border: rgba(69 76 87 / 0.9);
-  --text: rgb(248 248 248);
+  --base-leading: 2;
+  --card-border: rgba(77 85 97 / 0.9);
 }
 
 html {
@@ -20,7 +20,7 @@ body {
   align-items: flex-start;
   font-family: "DM Mono", ui-monospace, ui-sans-serif;
   font-size: 1rem;
-  color: var(--text);
+  color: var(--txt-color);
   line-height: 1.5;
   background: var(--bg-color);
 }
@@ -54,7 +54,7 @@ body::before {
   line-height: 1;
 }
 
-#sticky {
+#sticky-menu {
   position: sticky;
   top: 24px;
 }
@@ -75,8 +75,8 @@ nav a {
   border-radius: 8px;
   display: block;
   font-size: 1.125rem;
-  color: var(--text);
-  line-height: 2;
+  color: var(--txt-color);
+  line-height: var(--base-leading);
   text-decoration: none;
 }
 
@@ -92,8 +92,8 @@ nav a:hover {
 }
 
 #load-md a {
-  color: var(--text);
-  line-height: 2;
+  color: var(--txt-color);
+  line-height: 1.5;
   text-decoration: none;
 }
 
@@ -102,6 +102,10 @@ main {
   margin: 0 0 24px 24px;
   flex: 0 0 auto;
   min-width: 0;
+}
+
+#about-me {
+  text-align: justify;
 }
 
 .card {
@@ -132,17 +136,6 @@ h3 {
   padding: 14px 28px 4px 20px;
 }
 
-.card-body a {
-  display: block;
-  color: var(--text);
-  line-height: 2;
-  text-decoration: none;
-}
-
-#about-me {
-  text-align: justify;
-}
-
 #about-me p {
   margin-top: 0;
 }
@@ -161,15 +154,15 @@ h3 {
   width: 35vw;
 }
 
-#skill-set h3 {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 #technical-skills, 
 #creative-skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+#skill-set h3 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 #experience {
@@ -180,7 +173,14 @@ ul {
   padding-left: 20px;
 }
 
-#misc-links {
+#my-links {
   width: fit-content;
   padding: 0 2px 8px 2px;
+}
+
+.card-body a {
+  display: block;
+  color: var(--txt-color);
+  line-height: var(--base-leading);
+  text-decoration: none;
 }
