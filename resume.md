@@ -58,3 +58,8 @@ Photoshop / DaVinci Resolve / After Effects
 - Researched API solutions for sending users SMS text updates
 - Enhanced input fields in the job opportunities section
 - Designed user flow diagrams for student profiles
+
+## My links
+
+1. [GitHub](https://github.com/sghetticode)
+2. [LinkedIn](https://www.linkedin.com/in/jakehblack/)
