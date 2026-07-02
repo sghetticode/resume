@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-/* Mobile device styles */
+/* Mobile breakpoint styles */
 html {
   overflow-x: hidden;
 }
@@ -48,8 +48,8 @@ body::before {
 #mobile-header {
   display: block;
   width: 100%;
-  padding: 18px;
-  color: var(--txt-color);
+  padding: 24px;
+  text-align: center;
   background: linear-gradient(180deg, rgba(10 27 33 / 0.9) 0%, rgba(17 45 56 / 0.9) 100%);
 }
 
@@ -60,9 +60,20 @@ h1 {
 }
 
 nav {
+  margin-bottom: 8px;
   font-size: 1.125rem;
   line-height: var(--base-leading);
   text-underline-offset: 3px;
+}
+
+nav a {
+  color: var(--txt-color);
+}
+
+.load-md a {
+  font-size: 1.125rem;
+  color: var(--txt-color);
+  text-decoration: none;
 }
 
 #sidebar {
@@ -70,10 +81,9 @@ nav {
 }
 
 main {
-  max-width: 75vw;
-  margin: 0 20px 20px 20px;
+  max-width: 90vw;
+  margin: 0 auto 32px auto;
   flex: 0 0 auto;
-  min-width: 0;
 }
 
 #about-me {
@@ -83,7 +93,7 @@ main {
 .card {
   width: auto;
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 32px;
   border: solid 0.5px var(--card-border);
   border-left: none;
   border-radius: 6px;
@@ -155,8 +165,15 @@ ul {
   text-decoration: none;
 }
 
-/* Laptop & desktop styles */
-@media (min-width: 1200px) {
+/* Tablet breakpoint styles */
+@media (min-width: 768px) {
+  main {
+    max-width: 80vw;
+  }
+}
+
+/* Laptop breakpoint styles */
+@media (min-width: 992px) {
   body {
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -216,14 +233,13 @@ ul {
   }
 
   main {
-    max-width: 40vw;
-    margin: 0 24px 24px 24px;
+    max-width: 50vw;
+    margin: 0 0 32px 32px;
   }
 
   .card {
-    width: auto;
+    width: 100%;
     height: fit-content;
-    margin-top: 24px;
     border-top: solid 0.5px var(--card-border);
     border-right: solid 0.5px var(--card-border);
     border-bottom: solid 0.5px var(--card-border);
@@ -234,5 +250,12 @@ ul {
     border-bottom-left-radius: 0;
     box-shadow: rgba(5 14 18 / 0.8) 1px 2px 3px;
     background: linear-gradient(22.5deg, rgb(5 14 18) 0%, rgb(29 31 36) 100%);
+  }
+}
+
+/* Desktop breakpoint styles */
+@media (min-width: 1200px) {
+  main {
+    max-width: 40vw;
   }
 }
