@@ -60,10 +60,17 @@ h1 {
 }
 
 nav {
-  margin-bottom: 8px;
+  width: fit-content;
+  margin: 20px auto 8px auto;
+  border-right: solid 1.5px var(--nav-border);
+  border-bottom: solid 1.5px var(--nav-border);
+  border-left: solid 1.5px var(--nav-border);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 0 16px 8px 16px;
   font-size: 1.125rem;
-  line-height: var(--base-leading);
   text-underline-offset: 3px;
+  line-height: var(--base-leading);
 }
 
 nav a {
@@ -197,11 +204,14 @@ ul {
   }
   
   nav {
-    margin-top: 20px;
-    border-top: solid 1px var(--nav-border);
-    border-bottom: solid 1px var(--nav-border);
-    border-left: solid 1px var(--nav-border);
+    width: min-content;
+    margin: 20px 0 8px 0;
+    border-top: solid 1.5px var(--nav-border);
+    border-right: none;
+    border-bottom: solid 1.5px var(--nav-border);
+    border-left: solid 1.5px var(--nav-border);
     border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
     border-bottom-left-radius: 8px;
     padding: 4px 0 10px 18px;
   }
