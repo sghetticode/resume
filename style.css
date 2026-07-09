@@ -64,7 +64,7 @@ nav {
   margin: 20px auto 10px auto;
   border: solid 0.5px var(--nav-border);
   border-radius: 6px;
-  padding: 8px 16px 12px 16px;
+  padding: 8px 16px;
   font-size: 1.125rem;
   text-underline-offset: 3px;
   line-height: var(--base-leading);
@@ -72,7 +72,6 @@ nav {
 }
 
 nav a {
-  padding: 0 5px;
   color: var(--txt-color);
 }
 
@@ -136,7 +135,7 @@ h3 {
 }
 
 #skills-wrapper {
-  width: 35vw;
+  width: 95%;
 }
 
 #technical-skills, 
@@ -170,10 +169,45 @@ ul {
   text-decoration: none;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: 24px 0;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(10 27 33 / 0.9) 0%, rgba(17 45 56 / 0.9) 100%);
+}
+
+#load-md-btn {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: "DM Mono", ui-monospace, ui-sans-serif;
+  background-color: rgb(15 39 48);
+  box-shadow: rgba(5 14 18 / 0.8) 1px 2px 3px;
+}
+
+#load-md-btn a {
+  font-size: 1rem;
+  color: var(--txt-color);
+  text-decoration: none;
+}
+
+#load-md-btn:active {
+  border: solid 0.5px var(--card-border);
+  background-color: rgb(18, 51, 64);
+}
+
 /* Tablet breakpoint styles */
 @media (min-width: 768px) {
   main {
-    max-width: 80vw;
+    max-width: 75vw;
+  }
+
+  #skills-wrapper {
+    width: 85%;
   }
 }
 
@@ -260,6 +294,14 @@ ul {
     border-bottom-left-radius: 0;
     box-shadow: rgba(5 14 18 / 0.8) 1px 2px 3px;
     background: linear-gradient(22.5deg, rgb(5 14 18) 0%, rgb(29 31 36) 100%);
+  }
+
+  #skills-wrapper {
+    width: 100%;
+  }
+
+  footer {
+    display: none;
   }
 }
 
