@@ -54,7 +54,7 @@ body::before {
 }
 
 h1 {
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
   font-weight: 400;
   line-height: 1;
 }
@@ -73,12 +73,7 @@ nav {
 
 nav a {
   color: var(--txt-color);
-}
-
-.load-md a {
-  font-size: 1.125rem;
-  color: var(--txt-color);
-  text-decoration: none;
+  padding: 0 4px;
 }
 
 #sidebar {
@@ -236,8 +231,8 @@ footer {
   }
   
   nav {
-    width: min-content;
-    margin: 20px 0 8px 0;
+    width: 66%;
+    margin: 26px 0 24px 0;
     border-top: solid 1.5px var(--nav-border);
     border-right: none;
     border-bottom: solid 1.5px var(--nav-border);
@@ -263,19 +258,19 @@ footer {
     text-decoration: underline;
     text-underline-offset: 3px;
   }
-  
-  .load-md {
-    margin-top: 24px;
-    padding-left: 12px;
-    border-left: solid 1.5px var(--card-border);
-  }
-  
-  .load-md a {
-    color: var(--txt-color);
-    line-height: 1.5;
-    text-decoration: none;
+
+  #load-md-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 12px 14px;
+    font-size: 1rem;
   }
 
+  #load-md-btn:hover {
+    border: solid 0.5px var(--card-border);
+    background-color: rgb(18, 51, 64);
+  }
+  
   main {
     max-width: 50vw;
     margin: 0 0 32px 32px;
